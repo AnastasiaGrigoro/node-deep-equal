@@ -1,6 +1,8 @@
 (function( factory ) {
   if (typeof define !== 'undefined' && define.amd) {
     define([], factory);
+  } else if (typeof define !== 'undefined' && define.petal) {
+    define(['deep-equal'], [], factory);
   } else if (typeof module !== 'undefined' && module.exports) {
     module.exports = factory();
   } else {
